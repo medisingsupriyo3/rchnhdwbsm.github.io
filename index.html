@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title> Blinking feature using JavaScript </title>
+    <style>
+        #blink {
+          float: right;
+            font-size: 20px;
+            font-weight: bold;
+            color: #2d38be;
+            transition: 0.8s;
+        }
+           </style>
+</head>
+<body>
+    <style style="text/css">
+        .marquee {
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+            background: #fefefe;
+            color: #333;
+            border: 1px solid #4a4a4a;
+        }
+        
+        .marquee p {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+            -moz-transform: translateX(200%);
+            -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+            -moz-animation: scroll-left 4s linear infinite;
+            -webkit-animation: scroll-left 4s linear infinite;
+            animation: scroll-left 40s linear infinite;
+        }
+        
+        @-moz-keyframes scroll-left {
+            0% {
+                -moz-transform: translateX(100%);
+            }
+            100% {
+                -moz-transform: translateX(-100%);
+            }
+        }
+        
+        @-webkit-keyframes scroll-left {
+            0% {
+                -webkit-transform: translateX(100%);
+            }
+            100% {
+                -webkit-transform: translateX(-100%);
+            }
+        }
+        
+        @keyframes scroll-left {
+            0% {
+                -moz-transform: translateX(100%);
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+            }
+            100% {
+                -moz-transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+
+    <div class="marquee">
+        <p> <a href ="#">NANDIGRAM HD IS WITHIN TOP 6 DISTRICTS IN EGIYE BANGLA</a>========<a href ="#">NANDIGRAM HD IS WITHIN TOP 6 DISTRICTS IN EGIYE BANGLA</a>========<a href ="#">NANDIGRAM HD IS WITHIN TOP 6 DISTRICTS IN EGIYE BANGLA</a>
+          </div>
+        </body><body>
+    <style style="text/css">
+        .marquee {
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+            background: #fefefe;
+            color: #333;
+            border: 1px solid #4a4a4a;
+        }
+        
+        .marquee p {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+            -moz-transform: translateX(200%);
+            -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+            -moz-animation: scroll-right 4s linear infinite;
+            -webkit-animation: scroll-right 4s linear infinite;
+            animation: scroll-right 60s linear infinite;
+        }
+        
+        @-moz-keyframes scroll-right {
+            0% {
+                -moz-transform: translateX(100%);
+            }
+            100% {
+                -moz-transform: translateX(-100%);
+            }
+        }
+        
+        @-webkit-keyframes scroll-right {
+            0% {
+                -webkit-transform: translateX(100%);
+            }
+            100% {
+                -webkit-transform: translateX(-100%);
+            }
+        }
+        
+        @keyframes scroll-right {
+            0% {
+                -moz-transform: translateX(100%);
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+            }
+            100% {
+                -moz-transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+
+    <div class="marquee">
+        <p> <a href ="#">NANDIGRAM HD RANKED 1 IN EGIYE BANGLA</a>========<a href ="#">NANDIGRAM HD RANKED 1 IN EGIYE BANGLA</a>========<a href ="#">NANDIGRAM HD RANKED 1 IN EGIYE BANGLA</a>
+          </div>
+        </body>
+<body>
+    <p id="blink">An initiative of Analysis & Research Wing, Nandigram Health District</p>
+        <script type="text/javascript">
+        var blink = document.getElementById('blink');
+        setInterval(function() {
+            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+        }, 2000);
+    </script>
+</body>
+<style>
+   {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 340px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #aaaa;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  height: 10%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 350px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: blue;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #orange;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <button class="dropdown-btn">OVERVIEW
+    <i class="fa fa-caret-down"></i>
+  </button>
+   <div class="dropdown-container">
+    <a href="maps.html">MAPS</a>
+    <a href="adm.html">ADMINISTRATIVE & POLICE AUTHORITIES</a>
+    <a href="manpowers.html">MANPOWER</a>
+    <a href="anmol.htm">ANMOL(ANM ONLINE)</a>
+    <a href="covid.html">COVID 19</a>
+    <a href="#">MESSAGE FROM Dy. CMOH III's DESK</a>
+      </div>
+   <button class="dropdown-btn">IMPORTANT ORDERS & NOTIFICATIONS
+   <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="emailstate.html">E MAILS RCH</a>
+    <a href="#">ORDERS</a>
+     <a href="#">NOTIFICATIONS</a>
+     <a href="#">AEFI</a>
+     <a href="#">MATERNAL DEATH</a>
+     <a href="#">INFANT DEATH</a>
+     <button class="dropdown-btn">E-OFFICE
+   <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="efile.html">FILE CORNER</a>
+     <a href="fmrnhd.html">ACCOUNTS</a>
+     <a href="#">LETTER ETC ISSUE CORNER</a>
+     <a href="impdocs.html">IMP SERVICE RELATED & PERSONAL DOCUMENTS</a>
+     <a href="recdcopy.html">OFFICE DOCUMENT RECEIVED COPIES</a>
+     <a href="#">VC LINKS</a>
+        </div>
+        <a href="rchlinks.html">OTHER IMP LINKS</a>
+    </div>  
+    <button class="dropdown-btn">UPCOMING PROGRAMS
+   <i class="fa fa-caret-down"></i>
+  </button>
+   <div class="dropdown-container">
+    <a href="#">EGIYE BANGLA</a>
+    <a href="bus.docx">BUS SERVICE FOR HCWs</a>
+    <a href="immun.html">IMMUNIZATION</a>
+    <button class="dropdown-btn">RBSK
+   <i class="fa fa-caret-down"></i>
+  </button>
+   <div class="dropdown-container">
+    <a href="#">RBSK M.O PHARMACIST DETAILS</a>
+    <a href="#">SCHOOL DETAILS</a>
+    <a href="#">AWC DETAILS</a>
+     <a href="bus.docx">S.I, A.D.I & D.I DETAILS</a>
+      <a href="immun.html">DPO & ICDS DETAILS</a> 
+      </div> 
+      </div> 
+      <button class="dropdown-btn">NTEP
+   <i class="fa fa-caret-down"></i>
+  </button>
+   <div class="dropdown-container">
+    <a href="#">ABOUT</a>
+     <a href="#">INFRASTRUCTURES</a>
+     <a href="#">STAFF PATTERN</a>
+     <a href="ntepppts.html">IEC MATERIALS</a>
+     <a href="#">NTEP LIBRARY</a>
+      <a href="#">PRIVATE HEALTH ESTABLISHMENTS</a>
+      <a href="dtodet.html">DETAILS OF THE DTOs, INDIA </a>
+      <a href="tblinks.html">IMP LINKS</a>
+
+
+      </div>
+  <button class="dropdown-btn">TRAININGS
+   <i class="fa fa-caret-down"></i>
+  </button>
+   <div class="dropdown-container">
+    <button class="dropdown-btn">EGIYE BANGLA
+   <i class="fa fa-caret-down"></i>
+  </button>
+   <div class="dropdown-container">
+    <a href="ebtvid.html">TUTORIAL VIDEOS</a>
+    <a href="ebtdoc.html">TUTORIAL DOCUMENTS</a>
+  </div>
+     <button class="dropdown-btn">CPHC TRAINING PROGRAMME
+   <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="bpcchn.html">BPCCHN LIBRARY</a>
+    <a href="#">BPCCHN INTERACTVE CLASSROOM</a>
+    <a href="#">BPCCHN CONTAI ALUMNIS</a>
+    <a href="#">BPCCHN CONTAI E-MAGAZINES</a>
+    <a href="#">BPCCHN EXAM PORTAL</a>
+    </div>
+    <button class="dropdown-btn">RCH TRAININGS
+   <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="vpd.html">VPD</a>
+    <a href="mcpc.html">MCPC</a>
+    <a href="#">NCCMIS</a>
+    <a href="#">FPLMIS</a>
+    <a href="#">HMIS</a>
+    </div>
+          <a href="covtrng.html">COVID 19</a>
+      </div>
+  <button class="dropdown-btn">ANALYSIS AND RESEARCH WING, NHD
+   <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="reslib.html">LIBRARY FOR RESEARCHERS</a>
+    <a href="#">JOURNALS & IMP LINKS</a>
+    <a href="#">ONGOING RESEARCHES</a>
+    <a href="#">FEEDBACK FROM WORLD LEVEL SCIENTISTS</a>
+    <a href="#">YOUR COMMUNICATION</a>
+  </div>
+   <a href="#contact">PHOTO GALLERY</a>
+  <button class="dropdown-btn">CONTACT US 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">HOSPITALS</a>
+    <a href="#">BPHCs</a>
+    <a href="#">PHCs</a>
+    <a href="#">SCs</a>
+     </div>
+    <button class="dropdown-btn">LOGIN/REGISTER 
+    <i class="fa fa-caret-down"></i>
+  </button>
+   <div class="dropdown-container">
+    <a href="#">LOGIN</a>
+    <a href="#">REGISTER</a>
+    <a href="#">STATUS</a>
+  </div>
+   <a href="docs.html">DOCUMENTS DOWNLOADABLE</a>
+  <form action="http://www.example.com/login.php"> <p>********SEARCH  <input type="text" name="username" size="15"    maxlength="30" /> </p> </form> 
+</div>
+
+<div class="main">
+  <h1>RCH,NANDIGRAM HEALTH DISTRICT</h1>
+  <div>
+  </div>
+   <div>
+  </div>
+   <div>
+  </div>
+    <p>GOOD HEALTH OF OUR BENEFICIARIES IS OUR ONLY MOTTO</p>
+  <p></p>
+</div>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+<style><div><img>
+    {
+      height:300px; width: 200px;
+    }
+    {  
+      float: right;
+      margin-left:300px;
+      margin-top: 0px;
+    }
+       </div>
+      </style>
+    </head>
+      <div id="left"><Img src="dm.jpg"/></div>
+      </body>
+</Html>
+
